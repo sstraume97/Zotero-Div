@@ -104,33 +104,50 @@ for (let attachment of attachments) {
     console.log(` -> Found ${filteredAnnotations.length} annotations with color ${targetColor}.`);
 
     let noteHTMLContent = `<h2>Ord og forkortelser (${targetColor}) from ${attachment.getField('title') || 'attachment'}</h2>`;
-    noteHTMLContent += "<ul>";
+    noteHTMLContent += `
+  <table border="1" cellspacing="0" cellpadding="8" style="border-collapse: collapse; width: 100%;">
+    <thead>
+      <tr>
+        <th>Uthevet tekst</th>
+        <th>Notat</th>
+        <th>Side</th>
+      </tr>
+    </thead>
+    <tbody>
+`;
 
-    for (let anno of filteredAnnotations) {
-        noteHTMLContent += "<p>";
-        if (anno.annotationText) {
-            let escapedText = anno.annotationText.replace(/&/g, '&').replace(/</g, '<').replace(/>/g, '>');
-            noteHTMLContent += `<p>${escapedText}</p>`;
-        }
-        if (anno.annotationComment) {
-             let escapedComment = anno.annotationComment.replace(/&/g, '&').replace(/</g, '<').replace(/>/g, '>');
-            noteHTMLContent += `<p><b>Notat:</b> ${escapedComment}</p>`;
-        }
-        if (anno.annotationPosition) {
-            try {
-                let position = JSON.parse(anno.annotationPosition);
-                if (position.pageIndex !== undefined) {
-                    noteHTMLContent += `<p><small><b>Side:</b> ${position.pageIndex + 1}</small></p>`;
-                }
-            } catch (e) {
-                console.log("Could not parse annotation position:", anno.annotationPosition);
+for (let anno of filteredAnnotations) {
+    let text = anno.annotationText ? anno.annotationText.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : '';
+    let comment = anno.annotationComment ? anno.annotationComment.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : '';
+    
+    let pageNumber = '';
+    if (anno.annotationPosition) {
+        try {
+            let position = JSON.parse(anno.annotationPosition);
+            if (position.pageIndex !== undefined) {
+                pageNumber = position.pageIndex + 1;
             }
+        } catch (e) {
+            console.log("Could not parse annotation position:", anno.annotationPosition);
         }
-        let itemURI = Zotero.URI.getItemURI(anno);
-        noteHTMLContent += `<p><small><a href="${itemURI}">Gå til utheving</a></small></p>`;
-        noteHTMLContent += "</li>";
     }
-    noteHTMLContent += "</ul>";
+
+    let itemURI = Zotero.URI.getItemURI(anno);
+
+    noteHTMLContent += `
+      <tr>
+        <td>${text}</td>
+        <td>${comment}</td>
+        <td><a href="${itemURI}">${pageNumber}</a></td>
+      </tr>
+    `;
+}
+
+noteHTMLContent += `
+    </tbody>
+  </table>
+`;
+
 
     try {
         let newNote = new Zotero.Item('note');
