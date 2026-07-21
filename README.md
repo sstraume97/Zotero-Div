@@ -14,6 +14,7 @@ Diverse maler og skript for Zotero og Zotero utvidelser
 | <img src="https://raw.githubusercontent.com/018/zotcard/main/image/zotcard.png"> | [ZotCard](https://github.com/018/zotcard)                                                               | [ZotCard](ZotCard)                   | Innstallert januar 2025.                     | Nei     |
 |           ![Zotero-Div](Actions-and-Tags/Actions-and-Tags-favicon.png)           | [Actions and Tags for Zotero](https://github.com/windingwind/zotero-actions-tags/blob/master/README.md) | [Actions and Tags](Actions-and-Tags) | 30 egne regler, se [oversikt](Actions-and-Tags/README.md) | Ja      |
 |                                                                                  | [Better Notes](https://github.com/windingwind/zotero-better-notes) *(intern-ID: Knowledge4Zotero)*      | [Notatmaler](Notatmaler)             | 16 egne notatmaler, se [oversikt](Notatmaler/README.md)   | Ja      |
+|                                                                                  | *(egne oversettere, ikke en utvidelse)*                                                                  | [Oversettere](Oversettere)           | 3 egenskrevne oversettere for norske rettskilder, se [oversikt](Oversettere/README.md) | Ja      |
 
 ## Alle installerte utvidelser
 *Full oversikt generert fra en [Tara](https://github.com/l0o0/tara)-sikkerhetskopi av Zotero-profilen (21.7.2026). Tara er selv en av utvidelsene under (backup/gjenoppretting av innstillinger, utvidelser, stiler og lokaliseringsmotorer mellom maskiner).*
@@ -88,6 +89,7 @@ Diverse maler og skript for Zotero og Zotero utvidelser
 # Se også
 - [Innstillinger.md](Innstillinger.md) – utvalgte innstillinger (Better BibTeX, PDF-tema, Word/LibreOffice m.m.)
 - [Notatmaler](Notatmaler) – alle 16 Better Notes-malene mine, med forklaring
+- [Oversettere](Oversettere) – 3 egenskrevne translatorer for Lovdata, Regjeringen.no og Stortinget
 - [Sitérstiler.md](Sitérstiler.md) – de 25 CSL-stilene i profilen, inkl. norske/rettsvitenskapelige
 - [Tidligere-utvidelser.md](Tidligere-utvidelser.md) – avinstallerte utvidelser med etterlatte innstillinger, + sikkerhetsmerknad om API-nøkler
 - https://github.com/sstraume97/zotero-lookup-engines/tree/master

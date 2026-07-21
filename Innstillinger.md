@@ -24,7 +24,7 @@ Alle 16 egendefinerte notatmalene er hentet ut med fullt innhold og dokumentert 
 Zoteros innebygde tillegg for tekstbehandlere. Ingen egne tilpasninger utover standardoppsettet – kun versjonsmarkører som viser at begge har vært installert/forsøkt installert (Word 9.0.0, LibreOffice/OpenOffice 7.0.1, sistnevnte med `skipInstallation` slått på). Se også [Word/Sorting a Bibliography by Document Types.md](Word/Sorting%20a%20Bibliography%20by%20Document%20Types.md) for egen dokumentasjon om Word-oppsettet.
 
 ## Oversettere (translators)
-Mappen `translators/` inneholder rundt 750 filer, men dette er Zoteros egne innebygde nettstedsoversettere (samme som følger med enhver Zotero-installasjon), synkronisert til nyere versjoner via oversetter-serveren. Ingen håndskrevne/egne oversettere ble funnet i sikkerhetskopien.
+Mappen `translators/` inneholder rundt 750 filer. De aller fleste er Zoteros egne innebygde nettstedsoversettere, synkronisert til nyere versjoner via oversetter-serveren – **men** tre av dem er egenskrevne: se [Oversettere/README.md](Oversettere/README.md) for Lovdata, Regjeringen.no og Stortinget. *(Rettet 21.7.2026 – disse ble først feilaktig antatt å være rutineoppdateringer av standardoversettere.)*
 
 ## Sitérstiler
 Se egen fil: [Sitérstiler.md](Sitérstiler.md) – 25 CSL-stiler, inkludert flere norske og rettsvitenskapelige stiler.
