@@ -1,0 +1,94 @@
+// @use-refresh
+// @beforeloop-begin
+<h2>Annotation Matrix</h2>
+<table>
+<tr>
+<th>Papers</th>
+${{
+  function getColumns(attachmentItems) {
+    cols = [];
+    attachmentItems
+      .filter((item) => item.isAttachment())
+      .reduce((annots, item) => [...annots, ...item.getAnnotations()], [])
+      .forEach((annot) => {
+        const tags = annot
+          .getTags()
+          .map((tag) => tag.tag)
+          .filter((tag) => tag.startsWith("*"));
+        cols.push(...tags);
+      });
+    return Array.from(new Set(cols));
+  }
+  async function getPDFLink(item) {
+    const att = await item.getBestAttachment();
+    if (!att || !att.isPDFAttachment()) {
+      return "";
+    }
+    key = att.key;
+    if (att.libraryID === 1) {
+      return `zotero://open/library/items/${key}`;
+    } else {
+      groupID = Zotero.Libraries.get(att.libraryID).id;
+      return `zotero://open/groups/${groupID}/items/${key}`;
+    }
+  }
+  sharedObj.getPDFLink = getPDFLink;
+
+  attachments = items.reduce(
+    (atts, item) => [...atts, ...Zotero.Items.get(item.getAttachments())],
+    []
+  );
+  cols = getColumns(attachments);
+  sharedObj.cols = cols;
+  let str = "";
+  for (const col of cols) {
+    str += `<th>${col}</th>`;
+  }
+  return str;
+}}$
+</tr>
+// @beforeloop-end
+// @default-begin
+<tr>
+<td>
+${{
+  const creators = topItem.getCreators();
+  let content = "";
+  const year = topItem.getField("year");
+  if (creators.length === 0) {
+    content = "no author";
+  } else if (creators.length === 1) {
+    content = `${creators[0].lastName}, ${year}`;
+  } else {
+    content = `${creators[0].lastName} etal., ${year}`;
+  }
+  const link = await sharedObj.getPDFLink(topItem);
+  let str = `<a href="${link}">${content}</a >`;
+  return str;
+}}$
+</td>
+${{
+  const annotations = Zotero.Items.get(topItem.getAttachments())
+    .filter((item) => item.isPDFAttachment())
+    .reduce((annots, item) => [...annots, ...item.getAnnotations()], []);
+  let str = "";
+  for (const col of sharedObj.cols) {
+    const colAnnots = annotations.filter((annot) =>
+      annot
+        .getTags()
+        .map((tag) => tag.tag)
+        .includes(col)
+    );
+    str += "<td>";
+    str += await Zotero.BetterNotes.api.convert.annotations2html(colAnnots, {
+      noteItem: targetNoteItem,
+    });
+  }
+  str += "</td>";
+  return str;
+}}$
+</tr>
+// @default-end
+// @afterloop-begin
+</table>
+// @afterloop-end

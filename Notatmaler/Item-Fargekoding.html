@@ -1,0 +1,74 @@
+${await new Promise(async (r) => {
+/*functions */
+	async function getAnnotation(item) {
+
+		if (!item || !item.isAnnotation()) {
+			return null;
+		}
+		let json = await Zotero.Annotations.toJSON(item);
+		json.id = item.key;
+		delete json.key;
+		for (let key in json) {
+			json[key] = json[key] || "";
+		}
+		json.tags = json.tags || [];
+		return json;
+	}
+
+	async function getAnnotationsByColor(_item, colorFilter) {
+		const annots = _item.getAnnotations().filter(colorFilter);
+		if (annots.length === 0) {
+		  return {
+			html: "",
+		  };
+		}
+		let annotations = [];
+		for (let annot of annots) {
+		  const annotJson = await getAnnotation(annot);
+		  annotJson.attachmentItemID = _item.id;
+		  annotations.push(annotJson);
+		}
+	return Zotero.EditorInstanceUtilities.serializeAnnotations(annotations);
+	}
+
+	/*constants */
+	const attachments = Zotero.Items.get(topItem.getAttachments()).filter((i) =>
+	i.isPDFAttachment()
+	);
+	let res = `<h1>${topItem.getField("title")}</h1>`;
+	const colors = ["#ffd400", "#5fb236", "#e56eee", "#f19837", "#2ea8e5", "#aaaaaa", "#a28ae5", "#ff66b3"];
+	const colorNames = ["🖌️Generelle uthevinger", "❓Ord og forkortelser", "❗Viktige uthevinger", "👍Henvisninger","📚Konklusjoner og ideer", "💡Evidens og konklusjoner", "🧑‍💼Personer", "Egendefinert"];
+
+	/*loop each attachment */
+	try {
+	  for (let attachment of attachments) {
+		res += `<h2>📄For Document:${attachment.attachmentFilename}</h2>`;
+		for (let i in colors) {
+		  const renderedAnnotations = (
+			await getAnnotationsByColor(
+			  attachment,
+			  (_annot) => _annot.annotationColor === colors[i]
+			)
+		  ).html;
+		  if (renderedAnnotations) {
+			res += `<h3><p style="background-color:${colors[i]};">${colorNames[i]}</p></h3>\n${renderedAnnotations}`;
+		  }
+		}
+
+		const renderedAnnotations = (
+		  await getAnnotationsByColor(
+			attachment,
+			(_annot) => !colors.includes(_annot.annotationColor)
+		  )
+		).html;
+
+		if (renderedAnnotations) {
+		  res += `<h2><p>Other Annotations</p></h2>\n${renderedAnnotations}`;
+		}
+	  }
+	  	r(res);
+
+		} catch (e) {
+			Zotero.logError(e);
+    }
+})}

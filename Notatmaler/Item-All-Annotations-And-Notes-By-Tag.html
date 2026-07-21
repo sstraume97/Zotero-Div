@@ -1,0 +1,64 @@
+// @beforeloop-begin
+${{
+  sharedObj.tagsDict = {};
+  sharedObj.updateData = (item, tag) => {
+    if (!(tag in sharedObj.tagsDict)) {
+      sharedObj.tagsDict[tag] = [];
+    }
+    sharedObj.tagsDict[tag].push(item);
+  };
+  return "";
+}}$
+// @beforeloop-end
+// @default-begin
+${{
+  const annotationsAndNotes = [];
+  if (topItem.isRegularItem()) {
+    const attachments = Zotero.Items.get(topItem.getAttachments()).filter((i) =>
+      i.isPDFAttachment()
+    );
+    attachments.forEach((i) => {
+      annotationsAndNotes.splice(0, 0, ...i.getAnnotations());
+    });
+    const notes = Zotero.Items.get(topItem.getNotes());
+    annotationsAndNotes.splice(0, 0, ...notes);
+  } else if (topItem.isNote()) {
+    annotationsAndNotes.push(topItem);
+  }
+  annotationsAndNotes.forEach((item) =>
+    item
+      .getTags()
+      .map((tag) => tag.tag)
+      .forEach((tag) => {
+        sharedObj.updateData(item, tag);
+      })
+  );
+  return "";
+}}$
+// @default-end
+// @afterloop-begin
+${{
+  let res = "";
+  for (const tag in sharedObj.tagsDict) {
+    if(tag.startsWith('zotero://')){
+      continue;
+    }
+    res += `<h1>Tag: ${tag}</h1>\n`;
+    for (const note of sharedObj.tagsDict[tag].filter((item) =>
+      item.isNote()
+    )) {
+      res += `<p><a href="${Zotero.BetterNotes.api.convert.note2link(
+        note
+      )}">${note.getNoteTitle()}</a></p>\n`;
+    }
+    res += await Zotero.BetterNotes.api.convert.annotations2html(
+      sharedObj.tagsDict[tag].filter((item) => item.isAnnotation()),
+      {
+        noteItem: targetNoteItem
+      }
+    );
+    res += "\n";
+  }
+  return res;
+}}$
+// @afterloop-end

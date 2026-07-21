@@ -1,0 +1,5 @@
+<blockquote>
+  ${await new Promise(async (r) => {
+    r(await Zotero.BetterNotes.api.convert.link2html(link, {noteItem, dryRun: _env.dryRun}));
+  })}
+  </blockquote>

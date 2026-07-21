@@ -1,0 +1,116 @@
+<h2>${topItem.getField('title')}</h2>
+<table>
+    <tr>
+        <th style="background-color:#dbeedd;">
+            <p style="text-align: right">Tittel </p>
+        </th>
+        <td style="background-color:#dbeedd;">
+            <p>${topItem.getField('title')}</p>
+        </td>
+    </tr>
+    <tr>
+        <th style="background-color:#f3faf4;">
+            <p style="text-align: right">${(()=>{
+              if(topItem.itemType === "conferencePaper") return "Konferanse";
+              if(topItem.itemType === "journalArticle") return "Tidsskrift";
+              if(topItem.itemType === "report") return "Utgiver";
+              return "Publisher";})()}</p>
+        </th>
+        <td style="background-color:#f3faf4;"><p>${(()=>{
+              if(topItem.itemType === "conferencePaper") {
+                const res =  topItem.getField("conferenceName");
+                return res?res:topItem.getField("proceedingsTitle");
+              };
+              if(topItem.itemType === "journalArticle") return topItem.getField("publicationTitle");
+              if(topItem.itemType === "report") return topItem.getField("institution");
+              return topItem.getField("publicationTitle");})()}</p>
+        </td>
+    </tr>
+    <tr>
+        <th style="background-color:#dbeedd;">
+            <p style="text-align: right">Forfattere </p>
+        </th>
+        <td style="background-color:#dbeedd;">
+            <p>${topItem.getCreators().map((v)=>v.firstName+" "+v.lastName).join("; ")}</p>
+        </td>
+    </tr>
+    <tr>
+        <th style="background-color:#f3faf4;">
+            <p style="text-align: right">Pub. dato </p>
+        </th>
+        <td style="background-color:#f3faf4;">
+            <p>${topItem.getField('date')}</p>
+        </td>
+    </tr>
+    <tr>
+        <th style="background-color:#dbeedd;">
+            <p style="text-align: right">DOI </p>
+        </th>
+        <td style="background-color:#dbeedd;">
+            <a href="https://doi.org/${topItem.getField('DOI')}">${topItem.getField('DOI')}</a>
+        </td>
+    </tr>
+    <tr>
+        <th style="background-color:#f3faf4;">
+            <p style="text-align: right">URL</p>
+        </th>
+        <td style="background-color:#f3faf4;">
+            <p>${topItem.getField('url')}</p>
+        </td>
+    </tr>
+    <tr>
+        <th style="background-color:#dbeedd;">
+            <p style="text-align: right">🗝️ CitationKey</p>
+        </th>
+        <td style="background-color:#dbeedd;">
+            <p>${topItem.citationKey?topItem.citationKey:''}</p>
+        </td>
+    </tr>
+</table>
+</span></h1>\n
+
+<h2 style="color: #006064; background-color:   #E0F7FA;">📌 Nyttighet</h2>
+<hr />
+<h3> <span style="color: #1565C0">Hvorfor leser jeg dette? Hva du bør fokusere på？ </span></h3>
+<p></p>
+<h3> <span style="color: #1565C0">Hvilken inspirasjon kan denne artikkelen gi?？ </span></h3>
+<p></p>
+<h3> <span style="color: #1565C0">Hva er jeg i tvil om?？ </span></h3>
+<p></p>
+<h3> <span style="color:  #1565C0">Hvordan ville jeg uttrykke noen av disse ideene?</span></h3>
+<p></p>
+<h3> <span style="color: #1565C0">Hva har jeg lært av denne artikkelen</span></h3>
+<p></p>
+
+</span></h1>\n <h2 style="color:  #E65100; background-color:  #FFF8E1;">Første lesning</h2>
+<hr />
+<h3> <span style="color:  #1565C0">Sammendrag: </span></h3>
+<p></p>
+<h3> <span style="color:  #1565C0">Introduksjon: </span></h3>
+<p></p>
+<h3> <span style="color: #1565C0">Tekstens oppbygning: </span></h3>
+<p></p>
+<h3> <span style="color: #1565C0">Relaterte verk: </span></h3>
+<p></p>
+<h3> <span style="color: #1565C0">Konklusjon(er): </span></h3>
+<p></p>
+
+</span></h1>\n <h2 style="color:#2E7D32; background-color:    #F1F8E9;"> Andre lesning</h2>
+<hr />
+<h3> <span style="color:  #1565C0">Data, tall og eksempler: </span></h3>
+<p></p>
+<h3> <span style="color:  #1565C0">Modellarkitektur: </span></h3>
+<p></p>
+<h3> <span style="color:  #1565C0">Fremtidig arbeid: </span></h3>
+<p></p>
+
+</span></h1>\n <h2 style="color:#4A148C; background-color:    #F5F5F5;">Tredje lesning</h2>
+<hr />
+<h3> <span style="color:  #1565C0">Kan det gjenskapes? Er det noen antagelser som kan utfordres?</span></h3>
+<p></p>
+<h3> <span style="color:  #1565C0">Er det noen detaljer som ikke er håndtert godt?</span></h3>
+<p></p>
+<h3> <span style="color:  #1565C0">Har forskningen noen skjulte antagelser eller manglende referanser? Er det noen potensielle problemer med eksperimentet eller analysemetoden?</span></h3>
+<p></p>
+<h3> <span style="color:  #1565C0">Sammendrag av artikkelens fordeler og ulemper</span></h3>
+<p></p>

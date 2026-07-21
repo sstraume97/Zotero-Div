@@ -1,0 +1,89 @@
+name: "[Item]Boknotat"
+content:
+
+  <h1 style="text-align: center">${topItem.getField('title')}</h1><hr/>
+  <h2 style="color: #1B5E20; background-color:#F1F8E9;">💡 Metadata</h2>
+
+  <table>
+      <tr>
+          <th style="background-color:#dbeedd;">
+              <p style="text-align: left;">Tittel</p>
+          </th>
+          <td style="background-color:#dbeedd;">
+              ${topItem.getField('title')}
+          </td>
+      </tr>
+      <tr>
+          <th style="background-color:#f3faf4;">
+              <p style="text-align: left">Publikasjon</p>
+          </th>
+          <td style="background-color:#f3faf4;">
+              ${topItem.getField('publisher')}
+          </td>
+      </tr>
+      <tr>
+          <th style="background-color:#dbeedd;">
+              <p style="text-align: left">Forfattere</p>
+          </th>
+          <td style="background-color:#dbeedd;">
+              ${topItem.getCreators().map((v)=>v.firstName+" "+v.lastName).join("; ")}
+          </td>
+      </tr>
+
+      <tr>
+          <th style="background-color:#f3faf4;">
+              <p style="text-align: left">Pub. dato</p>
+          </th>
+          <td style="background-color:#f3faf4;">
+              ${topItem.getField('date')}
+          </td>
+      </tr>
+
+      </tr>
+      <tr>
+          <th style="background-color:#dbeedd;">
+              <p style="text-align: left">Utgiver</p>
+          </th>
+          <td style="background-color:#dbeedd;">
+              ${topItem.getField('publisher')}
+          </td>
+      </tr>
+
+      </tr>
+      <tr>
+          <th style="background-color:#f3faf4;">
+              <p style="text-align: left">ISBN</p>
+          </th>
+          <td style="background-color:#f3faf4;">
+              ${topItem.getField('ISBN')}
+          </td>
+      </tr>
+      <tr>
+          <th style="background-color:#dbeedd;">
+              <p style="text-align: left">Fil</p>
+          </th>
+          <td style="background-color:#dbeedd;">
+              <a href="zotero://open-pdf/0_${Zotero.Items.get(topItem.getAttachments())[0].key}">
+                  ${Zotero.Items.get(topItem.getAttachments())[0].getFilename()}
+              </a>
+          </td>
+      </tr>
+  </table>
+
+</a>
+<br>
+  <h2 style="color:#000000; background-color:    #ffe14d;">📝 Notater</h2>
+  <hr/>
+  <p></p>
+
+  <h2 style="color: #006064; background-color:   #E0F7FA;">📌 Inntrykk, tanker og spørsmål</h2>
+  <hr/>
+  <p></p>
+
+  <h2 style="color:#4A148C; background-color:    #F5F5F5;">🚩 Konklusjoner</h2>
+  <hr/>
+  <p></p>
+
+<h2 style="color: #003913; background-color:   #4dffe1;">📑 Sitater</h2>
+  <hr/>
+  <p></p>

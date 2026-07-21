@@ -1,0 +1,10 @@
+${await new Promise(async (r) => {
+    let res = "";
+    if (annotationItem.annotationComment) {
+      res += await Zotero.BetterNotes.api.convert.md2html(
+        annotationItem.annotationComment
+      );
+    }
+    res += await Zotero.BetterNotes.api.convert.annotations2html([annotationItem], {noteItem, ignoreComment: true});
+    r(res);
+  })}

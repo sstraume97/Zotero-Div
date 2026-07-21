@@ -1,0 +1,13 @@
+${await new Promise(async (r) => {
+    let header = {};
+    header.tags = noteItem.getTags().map((_t) => _t.tag);
+    header.parent = noteItem.parentItem
+      ? noteItem.parentItem.getField("title")
+      : "";
+    header.collections = (
+      await Zotero.Collections.getCollectionsContainingItems([
+        (noteItem.parentItem || noteItem).id,
+      ])
+    ).map((c) => c.name);
+    r(JSON.stringify(header));
+  })}
