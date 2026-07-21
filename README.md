@@ -16,3 +16,6 @@ Diverse maler og skript for Zotero og Zotero utvidelser
 | Program | Utvidelse | Beskrivelse |
 | --- | --- | --- |
 | Word | [ZoteroCiteLinker](https://github.com/sbaydin/ZoteroCiteLinker) | An MS Word Add-in that creates an interactive bridge between your in-text Zotero citations and your bibliography, all from a convenient custom Ribbon tab. // This add-in scans your document for Zotero-generated citation fields (e.g., [1], (Author, 2020)) and intelligently links them to the corresponding entries in your bibliography, allowing for instant navigation. |
+
+# Se også
+https://github.com/sstraume97/zotero-lookup-engines/tree/master
