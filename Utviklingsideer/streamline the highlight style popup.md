@@ -1,8 +1,10 @@
 # UI suggestion: streamline the highlight color/style popup in the PDF reader
 
+**Posted on Zotero forum:** https://forums.zotero.org/discussion/133371/ui-suggestion-streamline-the-highlight-color-style-popup-in-the-pdf-reader#latest
+
 ## Current behavior 
 
-￼
+![Today](https://github.com/sstraume97/Zotero-Div/blob/0155436476701a36dc9e09a7385a140392f329e3/assets/Redesignet-markeringsmeny-NAA.png)
 
 When you select text, the popup menu shows a row of 8 color swatches, and below that a separate row with two style toggles: highlight and underlined. 
 
@@ -13,7 +15,7 @@ I mocked up three possible redesigns of the popup to fix this. All three try to 
 
 ## Alt 1: Two full rows, one per style, solid color icons 
 
-￼
+![Alt 1](https://github.com/sstraume97/Zotero-Div/blob/6cddcf0a2a128b38cc040e27160c6d26fa90adeb/assets/Redesignet-markeringsmeny-1.png)
 
 The single color row is split into two rows of 8 colored buttons each (same 8 colors, same order in both rows):
 
@@ -25,13 +27,13 @@ Color and style are picked in a single click. 16 buttons total, but grouped clea
 
 ## Alt 2: Same two-row layout, lighter icon style 
 
-￼
+![Alt 2](https://github.com/sstraume97/Zotero-Div/blob/20247d6bc3116384443e116698193bee00ce18b0/assets/Redesignet-markeringsmeny-2.png)
 
 Structurally identical to Alt 1 (8 colors × 2 style rows), but the buttons are visually lighter: instead of solid color fill, each swatch is a white/transparent button with a colored outline and a colored "A" icon (boxed for highlight, underlined for underline). Same one-click color+style selection as Alt 1, but less visually heavy/saturated — closer in weight to the current menu's style toggles. 
 
 ## Alt 3: Same two rows, plain swatches with one label icon per row 
 
-￼
+![Alt 3](https://github.com/sstraume97/Zotero-Div/blob/a909506736901eae774f186bd9b927a146633ae7/assets/Redesignet-markeringsmeny-3.png)
 
 Same structure and functionality as Alt 1/Alt 2: a highlight row and an underline row, 8 colors each, clicking a swatch applies that color in that row's style. The difference is purely visual — the swatches themselves are plain solid color squares with no icon inside, and each row instead has a single leading label icon (boxed "A" for the highlight row, underlined "A" for the underline row) showing what that row does. So it's not more compact than Alt 1/Alt 2 (still 8+8 buttons) — if anything it's slightly wider because of the leading label icon — just a different visual treatment. 
 
