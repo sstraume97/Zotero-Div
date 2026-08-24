@@ -28,6 +28,9 @@ Zotero exposes an official hook, `Zotero.Reader.registerEventListener('renderTex
 
 This means **all actual annotation logic stays with Zotero**. The plugin never creates an annotation itself; it only orchestrates Zotero's own buttons. That keeps it small and reduces the chance of it corrupting anything — but it does depend on internal CSS class names, which is the main source of fragility (see [Caveats](#caveats)).
 
+- **More info here:** [DEVELOPMENT.md](https://github.com/sstraume97/Zotero-Div/blob/42a47f4fa6ec7840b8dbc2fe028a7ded1e52ffe3/Utviklingsideer/highlight-popup/DEVELOPMENT.md)
+- **Source code folder:** [addon](https://github.com/sstraume97/Zotero-Div/tree/42a47f4fa6ec7840b8dbc2fe028a7ded1e52ffe3/Utviklingsideer/highlight-popup/addon)
+
 ## Installation
 
 Download the `.xpi` from **[here](https://github.com/sstraume97/Zotero-Div/blob/97b1ea594afeb06ad4f24bcdb8e4a2669b28587e/Utviklingsideer/highlight-popup/streamline-highlight-popup-v0.6.xpi)**, then in Zotero: **Tools → Add-ons → gear icon → Install Add-on From File…**
