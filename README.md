@@ -4,11 +4,23 @@ date: 2025-01-07
 uid: MPVKodj2QT
 ---
 # Zotero-Div
-Diverse maler og skript for Zotero og Zotero utvidelser
+Diverse maler og skript, samt utvidelser for Zotero.
 
 
 ## Mine utvidelser
-*utvidelser jeg bruker, med egne maler/skript i dette repoet*
+
+> [!NOTE]
+> **Egetutviklet proof-of-concept plugin for alternative design på markeringspopup i PDF-leseren finnes her:** [popup-ui-plugin – Streamline Highlight Popup](https://github.com/sstraume97/Zotero-Div/blob/3134ce7a84d6fe6254e1dc271c8f8263bc2c7ec1/Utviklingsideer/highlight-popup/popup-ui-plugin.md)
+> <details>
+>  <summary>Skjermbilde</summary>
+>  
+>  ![The three layout options at both button sizes](https://github.com/sstraume97/Zotero-Div/blob/0d04771f72305c03d352a99ed856e1d1a6e337ab/assets/Plugin-popup-ui.png)
+>  
+>  ![Preferences pane](https://github.com/sstraume97/Zotero-Div/blob/0d04771f72305c03d352a99ed856e1d1a6e337ab/assets/Skjermbilde%202026-08-24%20113838.png)
+>  
+>  </details>
+
+### Utvidelser jeg bruker, med egne maler/skript i dette repoet
 
 |                                       Logo                                       | Utvidelse<br/> <sup>*lenke til repo*                                                                    | Mine maler/ skript                   | Notat                                        | Bruker? |
 | :------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------ | :----------------------------------- | :------------------------------------------- | :------ |
@@ -18,6 +30,7 @@ Diverse maler og skript for Zotero og Zotero utvidelser
 |                                                                                  | *(egne oversettere, ikke en utvidelse)*                                                                  | [Oversettere](Oversettere)           | 3 egenskrevne oversettere for norske rettskilder, se [oversikt](Oversettere/README.md) | Ja      |
 
 ## Alle installerte utvidelser
+
 *Full oversikt generert fra en [Tara](https://github.com/l0o0/tara)-sikkerhetskopi av Zotero-profilen (21.7.2026). Tara er selv en av utvidelsene under (backup/gjenoppretting av innstillinger, utvidelser, stiler og lokaliseringsmotorer mellom maskiner).*
 
 ### AI / chat med biblioteket
