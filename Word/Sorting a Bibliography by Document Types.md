@@ -1,3 +1,6 @@
+---
+uid: GmCeV5EC3e
+---
 In most styles, bibliographies are sorted primarily by author name. Some authors may also wish to sort it by document type, for example to distinguish between primary and secondary sources. This can easily be done by adding a simple macro and then adding it as the first sort criterion of the bibliography. The subheadings have to be added manually.
 
 Click on "Macros", then on the "+" at the top of the column, click on the "Macro" button in the pop-up window, and give it a name, for example "sort-by-type". The "macro: Sort-by-type" will appear in the macro list on the left, you can select it, click on the "+" and start entering the following instructions:

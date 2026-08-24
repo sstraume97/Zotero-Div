@@ -1,6 +1,7 @@
 ---
 description: Startside for repo
 date: 2025-01-07
+uid: MPVKodj2QT
 ---
 # Zotero-Div
 Diverse maler og skript for Zotero og Zotero utvidelser
@@ -46,13 +47,13 @@ Diverse maler og skript for Zotero og Zotero utvidelser
 
 ### Tagging og organisering
 
-| Utvidelse | Beskrivelse | Aktiv? |
-| --- | --- | --- |
-| [Zotero Categorial Tags](https://github.com/panhaoyu/zotero-categorial-tags) | Kategoriserte/hierarkiske tags (`#Kategori/Tag`) med fuzzy-søk | Ja |
-| ZoteroTag *(id: zoterotag@euclpts.com)* | Antatt tag-administrasjon (nøyaktig repo ikke bekreftet). Samme plugin-ID gjenbrukes som "avsender-navn" i [fargelabel-skriptet](Actions-and-Tags/Customize-Color-Labels-of-Reader.js) | Ja |
-| [Delete Item With Attachments](https://github.com/redleafnew/delitemwithatt) | Sletter vedlegg/filer samtidig som elementet slettes | Ja |
-| [Numify](https://github.com/Rafael-Silva-Oliveira/numify) | Automatisk hierarkisk nummerering av samlingsnavn (1, 1.1, 1.2 …) | Nei |
-| [ZODH](https://github.com/1ywan/zotero-odh) | Sender ord/uttrykk (lesenotater om ord/forkortelser) videre til Anki via AnkiConnect | Nei |
+| Utvidelse                                                                    | Beskrivelse                                                                                                                                                                            | Aktiv? |
+| ---------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| [Zotero Categorial Tags](https://github.com/panhaoyu/zotero-categorial-tags) | Kategoriserte/hierarkiske tags (`#Kategori/Tag`) med fuzzy-søk                                                                                                                         | Ja     |
+| ZoteroTag *(id: zoterotag@euclpts.com)*                                      | Antatt tag-administrasjon (nøyaktig repo ikke bekreftet). Samme plugin-ID gjenbrukes som "avsender-navn" i [fargelabel-skriptet](Actions-and-Tags/Customize-Color-Labels-of-Reader.js) | Ja     |
+| [Delete Item With Attachments](https://github.com/redleafnew/delitemwithatt) | Sletter vedlegg/filer samtidig som elementet slettes                                                                                                                                   | Ja     |
+| [Numify](https://github.com/Rafael-Silva-Oliveira/numify)                    | Automatisk hierarkisk nummerering av samlingsnavn (1, 1.1, 1.2 …)                                                                                                                      | Nei    |
+| [ZODH](https://github.com/1ywan/zotero-odh)                                  | Sender ord/uttrykk (lesenotater om ord/forkortelser) videre til Anki via AnkiConnect                                                                                                   | Nei    |
 
 ### Metadata, litteratursøk og sitering
 
@@ -87,7 +88,7 @@ Diverse maler og skript for Zotero og Zotero utvidelser
 | Word    | [ZoteroCiteLinker](https://github.com/sbaydin/ZoteroCiteLinker) | An MS Word Add-in that creates an interactive bridge between your in-text Zotero citations and your bibliography, all from a convenient custom Ribbon tab. // This add-in scans your document for Zotero-generated citation fields (e.g., [1], (Author, 2020)) and intelligently links them to the corresponding entries in your bibliography, allowing for instant navigation. |
 
 # Se også
-- [Innstillinger.md](Innstillinger.md) – utvalgte innstillinger (Better BibTeX, PDF-tema, Word/LibreOffice m.m.)
+- [Innstillinger.md](Verktøy/Zotero/Zotero-Div/Innstillinger.md) – utvalgte innstillinger (Better BibTeX, PDF-tema, Word/LibreOffice m.m.)
 - [Notatmaler](Notatmaler) – alle 16 Better Notes-malene mine, med forklaring
 - [Oversettere](Oversettere) – 3 egenskrevne translatorer for Lovdata, Regjeringen.no og Stortinget
 - [Sitérstiler.md](Sitérstiler.md) – de 25 CSL-stilene i profilen, inkl. norske/rettsvitenskapelige

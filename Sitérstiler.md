@@ -1,6 +1,7 @@
 ---
 description: De 25 sitérstilene (CSL) som lå i Zotero-profilen
 date: 2026-07-21
+uid: 9liBJlgbpg
 ---
 # Sitérstiler
 
@@ -48,5 +49,5 @@ Disse er ikke del av Zoteros standardutvalg, og er lastet ned/installert manuelt
 | `tidsskrift-for-den-norske-legeforening.csl` | Tidsskrift for Den norske legeforening | Medisinsk fagtidsskrift |
 
 ## Se også
-- [engines.json](engines.json) – lokaliseringsmotorene (locate-menyen), dokumentert i [README.md](README.md)
+- [engines.json](engines.json) – lokaliseringsmotorene (locate-menyen), dokumentert i [README.md](Verktøy/Zotero/Zotero-Div/README.md)
 - [Actions-and-Tags/README.md](Actions-and-Tags/README.md) – Høring-/Type-tags som antyder arbeid med forvaltnings-/rettsvitenskapelig materiale

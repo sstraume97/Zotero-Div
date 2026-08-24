@@ -1,10 +1,11 @@
 ---
 description: Utvalgte innstillinger og maler fra Zotero-profilen, utover utvidelseslisten i README
 date: 2026-07-21
+uid: 76KK3YvEUX
 ---
 # Innstillinger og maler
 
-Hentet fra samme Tara-sikkerhetskopi (21.7.2026) som [utvidelseslisten](README.md). Dette er innstillinger som ligger i `prefs.js`/utvidelsenes egne lagringsplasser, og som derfor ikke vises noe annet sted i repoet. API-nøkler er **ikke** tatt med her.
+Hentet fra samme Tara-sikkerhetskopi (21.7.2026) som [utvidelseslisten](Verktøy/Zotero/Zotero-Div/README.md). Dette er innstillinger som ligger i `prefs.js`/utvidelsenes egne lagringsplasser, og som derfor ikke vises noe annet sted i repoet. API-nøkler er **ikke** tatt med her.
 
 ## Better BibTeX
 - Citation key-formel (både ved generering og redigering): `auth.lower + shorttitle(3, 3) + year`

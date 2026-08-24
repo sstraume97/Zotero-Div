@@ -1,6 +1,7 @@
 ---
 description: Mine regler i Actions and Tags for Zotero
 date: 2026-07-21
+uid: YmQjjsCS7M
 ---
 # Actions and Tags
 

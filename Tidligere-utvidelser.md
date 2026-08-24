@@ -1,10 +1,11 @@
 ---
 description: Utvidelser som er avinstallert, men som har etterlatt innstillinger i profilen
 date: 2026-07-21
+uid: E8TvnKcZeC
 ---
 # Tidligere utvidelser
 
-Disse dukket opp som egne innstillingsgrupper i Tara-sikkerhetskopien (21.7.2026), men tilhører **ingen** av de 33 utvidelsene i [README.md](README.md) sin oversikt over installerte utvidelser – de er altså prøvd tidligere og siden avinstallert, men Zotero rydder ikke automatisk bort innstillingene til en fjernet utvidelse. Rene API-nøkler/tokens er **ikke** gjengitt her (kun nevnt at de finnes).
+Disse dukket opp som egne innstillingsgrupper i Tara-sikkerhetskopien (21.7.2026), men tilhører **ingen** av de 33 utvidelsene i [README.md](Verktøy/Zotero/Zotero-Div/README.md) sin oversikt over installerte utvidelser – de er altså prøvd tidligere og siden avinstallert, men Zotero rydder ikke automatisk bort innstillingene til en fjernet utvidelse. Rene API-nøkler/tokens er **ikke** gjengitt her (kun nevnt at de finnes).
 
 | Utvidelse | Hva den gjorde | Etterlatte innstillinger |
 | --- | --- | --- |
@@ -31,5 +32,5 @@ Backup-zipen fra Tara inneholder to reelle hemmeligheter i klartekst, fra utvide
 Disse er bevisst utelatt fra all dokumentasjon i dette repoet. Siden ingen av de to utvidelsene lenger er i bruk, bør nøklene vurderes tilbakekalt/rotert dersom de fortsatt er gyldige – uansett ligger de i klartekst i selve zip-filen så lenge den finnes.
 
 ## Se også
-- [README.md](README.md) – utvidelser som faktisk er installert i dag
-- [Innstillinger.md](Innstillinger.md) – innstillinger for aktive utvidelser
+- [README.md](Verktøy/Zotero/Zotero-Div/README.md) – utvidelser som faktisk er installert i dag
+- [Innstillinger.md](Verktøy/Zotero/Zotero-Div/Innstillinger.md) – innstillinger for aktive utvidelser

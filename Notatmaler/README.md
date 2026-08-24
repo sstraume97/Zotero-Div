@@ -1,6 +1,7 @@
 ---
 description: Mine notatmaler i Better Notes (Knowledge4Zotero)
 date: 2026-07-21
+uid: CSkTP9VYtW
 ---
 # Notatmaler (Better Notes)
 
