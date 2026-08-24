@@ -58,6 +58,9 @@ If you're from the Zotero team and want to take the idea further, please do — 
 
 Bug reports and pull requests are welcome — though be aware that my capacity to maintain this is limited.
 
+- **[Report bugs here](https://github.com/sstraume97/Zotero-Div/issues/new/choose)**
+<br/><br/>
+
 > [!NOTE]
 > If you find this plugin useful and actually know your way around Zotero plugin development — unlike me — you are more than welcome to take the project over, fork it, or rebuild it properly from scratch. I'd genuinely prefer that outcome: the idea deserves an implementation written by someone who knows what they're doing.
 > 
